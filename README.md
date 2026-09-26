@@ -183,14 +183,14 @@ Each model predicts one of the ten blend properties.
 ```
 Input Features
       |
-      +-----------------------------+
-      |                             |
-      v                             v
-   LightGBM                     LightGBM
-   Model 1                      Model 2
-      |                             |
-      v                             v
-BlendProperty1                BlendProperty2
+      |
+      |                             
+      v                             
+   LightGBM                     
+   Model 1                      
+      |                             
+      v                             
+BlendProperty1                
       |
       |
      ...
