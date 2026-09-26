@@ -43,7 +43,7 @@ The dataset contains:
 The main objective is to develop a machine learning model that learns the relationship between fuel component composition, component properties, and the final properties of the resulting fuel blend.
 
 The overall process can be represented as:
-
+```
 Component Composition + Component Properties
                     |
                     v
@@ -51,7 +51,7 @@ Component Composition + Component Properties
                     |
                     v
           Final Blend Properties
-
+```
 ## Machine Learning Approach
 
 Several machine learning approaches were explored during development:
@@ -108,6 +108,7 @@ Model Experiments
                         |
                         v
                  submission.csv 
+```
 
 ## Data Processing
 
