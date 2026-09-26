@@ -66,33 +66,48 @@ After comparison, LightGBM achieved the best local validation performance among 
 
 ## Model Development Workflow
 
+```text
 Training Data
-      ↓
+     |
+     v
 Data Loading & Inspection
-      ↓
+     |
+     v
 Feature / Target Separation
-      ↓
+     |
+     v
 Train–Validation Split
-      ↓
+     |
+     v
 Model Experiments
- ┌───────────────┬───────────────┐
- ↓               ↓               ↓
-XGBoost       LightGBM       XGB + LGBM
- └───────────────┴───────────────┘
-              ↓
-        MAPE Evaluation
-              ↓
-       Model Comparison
-              ↓
-       LightGBM Selected
-              ↓
-   Train on Complete Dataset
-              ↓
-      Predict Test Data
-              ↓
-   Generate 10 Properties
-              ↓
-       submission.csv
+     |
+     +------------------+------------------+
+     |                  |                  |
+     v                  v                  v
+  XGBoost           LightGBM        XGBoost + LightGBM
+     |                  |                  |
+     +------------------+------------------+
+                        |
+                        v
+                 MAPE Evaluation
+                        |
+                        v
+                 Model Comparison
+                        |
+                        v
+                 LightGBM Selected
+                        |
+                        v
+          Train on Complete Dataset
+                        |
+                        v
+                Predict Test Data
+                        |
+                        v
+             Generate 10 Properties
+                        |
+                        v
+                 submission.csv 
 
 ## Data Processing
 
