@@ -372,8 +372,5 @@ The validation results shown in this repository are experimental results obtaine
 
 Sayan Das
 
-Petroleum Engineering
 
-## Acknowledgements
 
-This project was developed as part of the Shell.ai Hackathon for Sustainable and Affordable Energy 2025 — Fuel Blend Properties Prediction Challenge.
