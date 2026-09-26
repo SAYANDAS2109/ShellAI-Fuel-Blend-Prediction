@@ -180,28 +180,28 @@ The tested ensemble did not improve upon the selected LightGBM model, so LightGB
 The final solution uses 10 independent LightGBM regression models.
 
 Each model predicts one of the ten blend properties.
+```text
+                    55 Input Features
+                           |
+                           v
+                 +-------------------+
+                 |   LightGBM Models |
+                 +-------------------+
+                           |
+        +----------+-------+-------+----------+
+        |          |               |          |
+        v          v               v          v
+      Model 1    Model 2         ...       Model 10
+        |          |                          |
+        v          v                          v
+       BP1        BP2                       BP10
+        |          |                          |
+        +----------+------------+-------------+
+                           |
+                           v
+                  10 Predicted Properties
 ```
-Input Features
-      |
-      |
-      |                             
-      v                             
-   LightGBM                     
-   Model 1                      
-      |                             
-      v                             
-BlendProperty1                
-      |
-      |
-     ...
-      |
-      v
-   LightGBM
-   Model 10
-      |
-      v
-BlendProperty10
-```
+
 The models were first evaluated using a train-validation split.
 
 After selecting the final configuration, all ten models were retrained using the complete training dataset of 2,000 samples.
@@ -235,13 +235,13 @@ The competition uses Mean Absolute Percentage Error (MAPE) as the evaluation met
 The general formulation is:
 ```
 MAPE = Mean(|Actual - Predicted| / |Actual|) × 100
-
+```
 Lower MAPE represents lower percentage prediction error.
 
 The best local validation MAPE obtained during development was approximately:
 
 1.1377
-```
+
 This is a local validation result and not the official competition leaderboard score.
 
 ## Validation Results
